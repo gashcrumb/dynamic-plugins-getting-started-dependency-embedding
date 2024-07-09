@@ -1,5 +1,6 @@
 import React from 'react';
 import { useChatMessages } from '../../hooks/useChatMessages';
+import { SHARED_VALUE } from '@internal/backstage-plugin-simple-chat-common';
 
 export const ChatMessageDisplay = () => {
   const { messages, error } = useChatMessages();
@@ -10,7 +11,7 @@ export const ChatMessageDisplay = () => {
     return (
       <div>
         No messages to show yet, type a message in the input below to start
-        chatting
+        chatting, also {SHARED_VALUE}
       </div>
     );
   }

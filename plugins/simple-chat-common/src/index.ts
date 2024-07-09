@@ -1,5 +1,9 @@
-import { createApiRef } from '@backstage/core-plugin-api';
-
+/***/
+/**
+ * Common functionalities for the simple-chat plugin.
+ *
+ * @packageDocumentation
+ */
 export type ChatMessage = {
   message: string;
   nickname: string;
@@ -21,6 +25,4 @@ export interface SimpleChatApi {
   postMessage(options: PostMessageOptions): Promise<void>;
 }
 
-export const simpleChatApiRef = createApiRef<SimpleChatApi>({
-    id: 'simple-chat',
-})
+export const SHARED_VALUE = "some shared value just in case";

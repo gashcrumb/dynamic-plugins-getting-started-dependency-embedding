@@ -1,14 +1,14 @@
 import React from 'react';
 import { createDevApp } from '@backstage/dev-utils';
 import { simpleChatPlugin, SimpleChatPage } from '../src/plugin';
+import { TestApiProvider } from '@backstage/test-utils';
 import {
   ChatMessage,
   GetMessagesOptions,
   PostMessageOptions,
   SimpleChatApi,
-  simpleChatApiRef,
-} from '../src/api/types';
-import { TestApiProvider } from '@backstage/test-utils';
+} from '@internal/backstage-plugin-simple-chat-common';
+import { simpleChatApiRef } from '../src/api/SimpleChatClient';
 
 const messages: ChatMessage[] = [];
 

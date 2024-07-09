@@ -21,13 +21,14 @@
     "clean": "backstage-cli package clean",
     "prepack": "backstage-cli package prepack",
     "postpack": "backstage-cli package postpack",
-    "export-dynamic": "janus-cli package export-dynamic-plugin" 
+    "export-dynamic": "janus-cli package export-dynamic-plugin --no-embed-as-dependencies --embed-package '@internal/backstage-plugin-simple-chat-common' --clean" 
   },
   "dependencies": {
     "@backstage/backend-common": "0.21.7",
     "@backstage/backend-plugin-api": "0.6.18",
     "@backstage/backend-app-api": "0.7.2",
     "@backstage/config": "^1.2.0",
+    "@internal/backstage-plugin-simple-chat-common": "0.1.0",
     "@types/express": "*",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",

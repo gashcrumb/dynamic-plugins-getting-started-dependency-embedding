@@ -8,8 +8,7 @@ import {
 } from '@backstage/core-plugin-api';
 
 import { rootRouteRef } from './routes';
-import { simpleChatApiRef } from './api/types';
-import { SimpleChatClient } from './api/SimpleChatClient';
+import { simpleChatApiRef, SimpleChatClient } from './api/SimpleChatClient';
 
 const pluginId = 'simple-chat';
 

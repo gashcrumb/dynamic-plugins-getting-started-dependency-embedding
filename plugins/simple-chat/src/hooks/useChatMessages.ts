@@ -1,5 +1,6 @@
 import { useApi } from '@backstage/core-plugin-api';
-import { ChatMessage, simpleChatApiRef } from '../api/types';
+import { simpleChatApiRef } from '../api/SimpleChatClient';
+import { ChatMessage } from '@internal/backstage-plugin-simple-chat-common';
 import { useCallback } from 'react';
 import useAsyncRetry from 'react-use/esm/useAsyncRetry';
 import useInterval from 'react-use/esm/useInterval';

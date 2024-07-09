@@ -8,7 +8,12 @@ import {
   GetMessagesResult,
   PostMessageOptions,
   SimpleChatApi,
-} from './types';
+} from '@internal/backstage-plugin-simple-chat-common';
+import { createApiRef } from '@backstage/core-plugin-api';
+
+export const simpleChatApiRef = createApiRef<SimpleChatApi>({
+    id: 'simple-chat',
+})
 
 export interface SimpleChatClientOptions {
   pluginId: string;
