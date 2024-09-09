@@ -46,6 +46,8 @@ yarn build:all
 yarn export-dynamic
 ```
 
+Be sure to observe the output of the `export-dynamic` command.  The command should output that it has embedded both the `@internal/backstage-plugin-simple-chat-common` and `@internal/backstage-plugin-some-other-common` packages into the exported `simple-chat-backend` plugin.:w
+
 ## Deploying this example
 
 This example can be deployed following the instructions outlined [starting from here](https://github.com/gashcrumb/dynamic-plugins-getting-started?tab=readme-ov-file#phase-4---dynamic-plugin-deployment), the scripts in this copy have been updated appropriately.
