@@ -6615,6 +6615,7 @@ __metadata:
     "@backstage/plugin-auth-backend": ^0.22.8
     "@backstage/plugin-auth-backend-module-guest-provider": ^0.1.3
     "@internal/backstage-plugin-simple-chat-common": "*"
+    "@internal/backstage-plugin-some-other-common": "*"
     "@janus-idp/cli": ^1.11.1
     "@types/express": "*"
     "@types/supertest": ^2.0.12
@@ -6661,6 +6662,14 @@ __metadata:
     react-use: ^17.2.4
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
+  languageName: unknown
+  linkType: soft
+
+"@internal/backstage-plugin-some-other-common@*, @internal/backstage-plugin-some-other-common@workspace:plugins/some-other-common":
+  version: 0.0.0-use.local
+  resolution: "@internal/backstage-plugin-some-other-common@workspace:plugins/some-other-common"
+  dependencies:
+    "@backstage/cli": ^0.26.3
   languageName: unknown
   linkType: soft
 

@@ -8,7 +8,11 @@ import {
 import { Config } from '@backstage/config';
 import express from 'express';
 import Router from 'express-promise-router';
-import { ChatMessage, SHARED_VALUE } from '@internal/backstage-plugin-simple-chat-common';
+import {
+  ChatMessage,
+  SHARED_VALUE,
+} from '@internal/backstage-plugin-simple-chat-common';
+import { sharedFunction } from '@internal/backstage-plugin-some-other-common';
 
 export interface RouterOptions {
   logger: LoggerService;
@@ -30,8 +34,15 @@ export async function createRouter(
 
   router.post('/', async (req, res) => {
     await httpAuth.credentials(req, { allow: ['user'] });
-    logger.info('Got request body: ' + JSON.stringify(req.body ) + ' also ' + SHARED_VALUE);
-    const { nickname, message } = await req.body as ChatMessage;
+    logger.info(
+      'Got request body: ' +
+        JSON.stringify(req.body) +
+        ' also ' +
+        SHARED_VALUE +
+        ' and ' +
+        sharedFunction(),
+    );
+    const { nickname, message } = (await req.body) as ChatMessage;
     messages.push({
       nickname,
       timestamp: new Date().toLocaleTimeString('en-US'),
@@ -39,7 +50,7 @@ export async function createRouter(
     });
     res.end();
   });
-  
+
   router.get('/', async (req, res) => {
     await httpAuth.credentials(req, { allow: ['user'] });
     res.status(200).json({ messages });

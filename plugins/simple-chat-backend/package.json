@@ -21,7 +21,7 @@
     "clean": "backstage-cli package clean",
     "prepack": "backstage-cli package prepack",
     "postpack": "backstage-cli package postpack",
-    "export-dynamic": "janus-cli package export-dynamic-plugin"
+    "export-dynamic": "janus-cli package export-dynamic-plugin --embed-package @internal/backstage-plugin-some-other-common"
   },
   "dependencies": {
     "@backstage/backend-app-api": "0.7.2",
@@ -29,6 +29,7 @@
     "@backstage/backend-plugin-api": "0.6.18",
     "@backstage/config": "^1.2.0",
     "@internal/backstage-plugin-simple-chat-common": "*",
+    "@internal/backstage-plugin-some-other-common": "*",
     "@types/express": "*",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
