@@ -46,7 +46,7 @@ yarn build:all
 yarn export-dynamic
 ```
 
-Be sure to observe the output of the `export-dynamic` command.  The command should output that it has embedded both the `@internal/backstage-plugin-simple-chat-common` and `@internal/backstage-plugin-some-other-common` packages into the exported `simple-chat-backend` plugin.:w
+Be sure to observe the output of the `export-dynamic` command.  The command should output that it has embedded both the `@internal/backstage-plugin-simple-chat-common` and `@internal/backstage-plugin-some-other-common` packages into the exported `simple-chat-backend` plugin.
 
 ## Deploying this example
 
